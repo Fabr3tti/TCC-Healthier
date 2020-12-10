@@ -1,0 +1,81 @@
+﻿@model IEnumerable<TCC.Models.Fruta>
+
+@{
+    ViewData["Title"] = "Tabela de Frutas";
+    Layout = "~/Views/Shared/_LayoutDef.cshtml";
+}
+<ul>
+    <li>
+        <a asp-area="" asp-controller="Admin" asp-action="Index">Voltar para a página Administrativa</a>
+    </li>
+</ul>
+
+<p>
+    <a asp-action="Create">Criar novo</a>
+</p>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Benefício1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Benefício2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Benefício3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Benefício4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Benefício5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Benefício6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Foto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Benefício1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Benefício2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Benefício3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Benefício4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Benefício5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Benefício6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

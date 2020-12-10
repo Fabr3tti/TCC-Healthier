@@ -1,0 +1,42 @@
+﻿@model TCC.Models.Receita
+
+@{
+    Layout = "~/Views/Shared/_LayoutDef.cshtml";
+    ViewData["Title"] = "Detalhes";
+}
+
+<div>
+    <h4>Receita</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Título)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Título)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ingredientes)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ingredientes)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Preparo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Preparo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FotoRe)
+        </dt>
+        <dd class="col-sm-10">
+            <img class="img-fluid" src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + Model.FotoRe)
+                        ? Url.Content(Model.FotoRe) : Url.Content("~/img/img-indisponivel.png"))" />
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Index">Voltar para a Lista</a>
+</div>

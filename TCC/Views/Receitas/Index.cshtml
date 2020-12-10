@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TCC.Models.Receita>
+
+@{
+    Layout = "~/Views/Shared/_LayoutDef.cshtml";
+    ViewData["Title"] = "Tabela de Receitas";
+}
+
+<ul>
+    <li>
+        <a asp-area="" asp-controller="Admin" asp-action="Index">Voltar para a página Administrativa</a>
+    </li>
+</ul>
+
+<p>
+    <a asp-action="Create">Criar Nova</a>
+</p>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Título)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredientes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preparo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FotoRe)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Título)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredientes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preparo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FotoRe)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,84 @@
+﻿@model TCC.Models.Fruta
+
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_LayoutDef.cshtml";
+}
+
+<h4>Fruta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div><div class="form-group">
+                <label asp-for="Benefício1" class="control-label"></label>
+                <input asp-for="Benefício1" class="form-control" />
+                <span asp-validation-for="Benefício1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Benefício2" class="control-label"></label>
+                <input asp-for="Benefício2" class="form-control" />
+                <span asp-validation-for="Benefício2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Benefício3" class="control-label"></label>
+                <input asp-for="Benefício3" class="form-control" />
+                <span asp-validation-for="Benefício3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Benefício4" class="control-label"></label>
+                <input asp-for="Benefício4" class="form-control" />
+                <span asp-validation-for="Benefício4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Benefício5" class="control-label"></label>
+                <input asp-for="Benefício5" class="form-control" />
+                <span asp-validation-for="Benefício5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Benefício6" class="control-label"></label>
+                <input asp-for="Benefício6" class="form-control" />
+                <span asp-validation-for="Benefício6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Foto" class="control-label"></label>
+                <input type="hidden" asp-for="Foto" />
+                <input type="file" id="NovaFoto" name="NovaFoto" class="form-control" accept=".png,.jpg,.jpeg,.gif" />
+                <span asp-validation-for="Foto" class="text-danger"></span>
+                <img src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + Model.Foto)
+                        ? Url.Content(Model.Foto) : Url.Content("~/img/img-indisponivel.png"))"
+                     class="img-fluid" id='PreviewFoto' />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para a Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+<script type="text/javascript">
+    window.addEventListener('load', function () {
+        document.querySelector('input[type="file"]').addEventListener('change', function () {
+            if (this.files && this.files[0]) {
+                var img = document.getElementById('PreviewFoto');
+                img.src = URL.createObjectURL(this.files[0]);
+            }
+        });
+    });
+
+</script>
+}

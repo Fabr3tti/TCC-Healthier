@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Área Admnistrativa";
+    Layout = "~/Views/Shared/_LayoutDef.cshtml";
+}
+
+
+<div class="container-fluid mb-5 mt-5">
+    <div class="row">
+        <div class="col-4 col-sm-4">
+            <a class="nav-link" asp-area="" asp-controller="Frutas" asp-action="Index">Cadastro de Frutas</a>
+        </div>
+        <div class="col-4 col-sm-4">
+            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/logo.png" id="logo" /></a>
+        </div>
+        <div class="col-4 col-sm-4">
+            <a class="nav-link" asp-area="" asp-controller="Receitas" asp-action="Index">Cadastro de Receitas</a>
+        </div>
+
+    </div>
+</div>

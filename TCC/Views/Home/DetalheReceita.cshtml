@@ -1,0 +1,32 @@
+﻿@model TCC.Models.Receita
+@{
+    ViewData["Title"] = "Receitas";
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+}
+
+@section Styles{ 
+    <link href="~/css/classe.css" rel="stylesheet" />
+}
+
+<div class="container-fluid mt-5">
+    <div class="row mb-5" id="centro">
+
+            <div class="col-6 col-sm-6">
+
+              <img src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + Model.FotoRe)
+                        ? Url.Content(Model.FotoRe) : Url.Content("~/img/img-indisponivel.png"))" id="borda-azul" class="mb-2">
+            </div>
+
+            <div class="col-6 col-sm-6">
+              <a id="fruta-texto-lg" class="mt-5">
+                
+                  <h3>@Model.Título</h3>
+                  <p class="mb-3">@Model.Ingredientes</p>
+                  <p>@Model.Preparo</p>
+
+              </a>
+            </div>
+    </div>
+</div>
+
+

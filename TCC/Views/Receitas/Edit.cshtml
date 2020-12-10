@@ -1,0 +1,62 @@
+﻿@model TCC.Models.Receita
+
+@{
+    Layout = "~/Views/Shared/_LayoutDef.cshtml";
+    ViewData["Title"] = "Editar Receita";
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Título" class="control-label"></label>
+                <input asp-for="Título" class="form-control" />
+                <span asp-validation-for="Título" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredientes" class="control-label"></label>
+                <input asp-for="Ingredientes" class="form-control" />
+                <span asp-validation-for="Ingredientes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Preparo" class="control-label"></label>
+                <input asp-for="Preparo" class="form-control" />
+                <span asp-validation-for="Preparo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FotoRe" class="control-label"></label>
+                <input type="hidden" asp-for="FotoRe" />
+                <input type="file" id="NovaFoto" name="NovaFoto" class="form-control" accept=".png,.jpg,.jpeg,.gif" />
+                <img src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + Model.FotoRe)
+                        ? Url.Content(Model.FotoRe) : Url.Content("~/img/img-indisponivel.png"))"
+                     class="img-fluid" id='PreviewFoto' />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para a Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+    window.addEventListener('load', function () {
+        document.querySelector('input[type="file"]').addEventListener('change', function () {
+            if (this.files && this.files[0]) {
+                var img = document.getElementById('PreviewFoto');
+                img.src = URL.createObjectURL(this.files[0]);
+            }
+        });
+    });
+
+    </script>
+}

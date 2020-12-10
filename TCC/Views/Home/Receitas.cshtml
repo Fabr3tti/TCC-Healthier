@@ -1,0 +1,28 @@
+﻿@model IEnumerable<TCC.Models.Receita>
+@{
+    ViewData["Title"] = "Receitas";
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+}
+
+@section Styles{ 
+    <link href="~/css/classe.css" rel="stylesheet" />
+}
+
+<div class="container-fluid mt-5">
+    <div class="row mb-5" id="centro">
+
+
+        @foreach (var item in Model)
+        {
+
+        <div class="col-6 col-sm-6 mb-5 mt-5">
+
+            <a asp-action="DetalheReceita" asp-route-id="@item.Id"><h3>@item.Título</h3></a>
+
+        </div>
+
+        }
+    </div>
+</div>
+
+

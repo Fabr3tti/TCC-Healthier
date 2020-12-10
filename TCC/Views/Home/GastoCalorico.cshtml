@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "Gasto Calórico";
+}
+
+<div class="container-fluid mb-5 mt-5">
+    <div class="row mb-5">
+        <div class="col-12 col-sm-12" id="titulo-calc">
+            <img src="~/img/Titulo2.png">
+        </div>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-12 col-sm-12">
+            <br><br>
+            <div class="yz-widget" data-calculator-type="calories_burned" data-language="pt" data-unit-system="metric" data-background-color="#4d4d4d" data-text-color="#ffffff" data-primary-color="#404040" data-alternate-background-color="#404040" data-alternate-text-color="#ffffff" data-secondary-color="#404040"><span class="yz-copyright">Powered by <a href="https://www.yazio.com/pt/calculadora-gasto-calorico">YAZIO</a></span></div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12 col-sm-12" id="titulo-calc">
+            <img src="~/img/info.png">
+        </div>
+    </div>
+
+    <div class="row mb-3" id="calc-texto">
+        <div class="col-6 col-sm-6;">
+            <p>
+                O segredo para não engordar é<br>
+                ingerir a mesma quantidade de<br>
+                calorias que gasta por dia
+            </p>
+        </div>
+        <div class="col-6 col-sm-6">
+            <p>
+                Gasto Calórico Basal é a quantidade<br>
+                que seu corpo precisa para garantir<br>
+                o funcionamento de todos<br>
+                os órgãos do sistema
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-5" id="calc-texto">
+        <div class="col-6 col-sm-6;">
+            <p>
+                Sempre que for ingerido uma quantidade<br>
+                maior de calorias, a pessoa irá engordar e<br>
+                se ingerir uma quantidade menor, irá emagrecer
+            </p>
+        </div>
+        <div class="col-6 col-sm-6">
+            <p>
+                Variações de peso estão diretamente<br>
+                relacionadosa quantidade de calorias<br>
+                ingeridas diariamente
+            </p>
+        </div>
+    </div>
+
+
+@section Scripts{
+    <script src="https://widget.yazio.com/calculator.js"></script>
+}

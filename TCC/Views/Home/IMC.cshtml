@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "IMC";
+}
+
+<div class="container-fluid mb-5 mt-5">
+    <div class="row mb-5">
+        <div class="col-12 col-sm-12" id="titulo-calc">
+            <img src="~/img/Titulo.png">
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-12 col-sm-12">
+            <div class="yz-widget" data-calculator-type="bmi" data-language="pt" data-unit-system="metric" data-background-color="#4d4d4d" data-text-color="#ffffff" data-primary-color="#404040" data-alternate-background-color="#404040" data-alternate-text-color="#FFFFFF" data-secondary-color="#404040"><span class="yz-copyright">Powered by <a href="https://www.yazio.com/pt/calculadora-imc">YAZIO</a></span></div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12 col-sm-12" id="titulo-calc">
+            <img src="~/img/info.png">
+        </div>
+    </div>
+
+    <div class="row mb-3" id="calc-texto">
+        <div class="col-6 col-sm-6;">
+            <p>
+                É uma ferramenta usada para detectar casos<br>
+                de ibesidade ou desnutrição, principalmente<br>
+                em estudos que envolvem grandes populações
+            </p>
+        </div>
+        <div class="col-6 col-sm-6">
+            <p>
+                O IMC é calculado dividindo o peso pela altura<br>
+                elevada ao quadrado. Ou seja, de forma simplificada,<br>
+                multiplique sua altura por ela mesma e divida<br>
+                seu peso pelo resultado da última conta
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-5" id="calc-texto">
+        <div class="col-6 col-sm-6">
+            <p>
+                Infelizmente a medida de IMC nem sempre<br>
+                representa a realidade. Por exemplo,<br>
+                o músculo é muito mais pesado que a gordura
+            </p>
+        </div>
+        <div class="col-6 col-sm-6">
+            <p>
+                É de extrema importância consultar<br>
+                um especialista para que possa ser feito a análise<br>
+                do IMC junto com outros índices e medidas usados<br>
+                para entender a composição corporal
+            </p>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="https://widget.yazio.com/calculator.js"></script>
+}

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<TCC.Models.Fruta>
+@{
+    ViewData["Title"] = "Frutas";
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+}
+
+@section Styles{ 
+    <link href="~/css/classe.css" rel="stylesheet" />
+}
+
+<div class="container-fluid mt-5">
+    <div class="row mb-5" id="centro">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-6 col-sm-6">
+
+              <img src="@(System.IO.File.Exists(ViewData["CaminhoFoto"] + item.Foto)
+                        ? Url.Content(item.Foto) : Url.Content("~/img/img-indisponivel.png"))" id="bord-verm-sm" class="mb-2">
+
+              <a id="fruta-texto-lg">
+                  <p class="mt-1">@item.Benefício1</p>
+                  <p>@item.Benefício2</p>
+                  <p>@item.Benefício3</p>
+                  <p>@item.Benefício4</p>
+                  <p>@item.Benefício5</p>
+                  <p>@item.Benefício6</p>
+              </a>
+            </div>
+        }
+    </div>
+</div>
+
+

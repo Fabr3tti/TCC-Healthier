@@ -1,0 +1,154 @@
+#centro{
+    text-align: center;
+}
+
+#img-home {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+
+#copy {
+    background-color: #333333;
+}
+
+#copy-let {
+    font-size: 10px;
+    color: #808080;
+    text-align: center;
+}
+
+#logo {
+    width: 250px;
+    height: 125px;
+    margin-left: 15%;
+}
+
+#fonte-branca {
+    color: white;
+    margin-left:25%
+}
+
+#logo-baixo {
+    width: 250px;
+    height: 125px;
+    margin-left: 50%
+}
+
+#fotos-let {
+    color: white;
+    text-align: center;
+}
+
+#body{
+    background-color: #262626;
+}
+
+#fonte-branca{
+    color:white
+}
+
+#fundo-preto {
+    background-color: #262626;
+}
+
+#container-home {
+    background-color: #404040;
+    text-align: center;
+}
+
+#voltar{
+    height: 100px;
+    width: 250px;
+    margin-left: 25%
+}
+
+#fruta-texto{
+    color:white;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    text-align: left
+}
+
+#fruta-texto {
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    text-align: left
+}
+
+
+#calc-texto{
+    color:white;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    text-align: center
+}
+
+#fruta-texto-lg {
+    color:white;
+    font-family: 'Jost', sans-serif;
+    font-size: 22px;
+}
+
+#borda-vermelha {
+    object-fit:cover;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 3px solid #ea1e63;
+    text-align:center;
+}
+
+#borda-azul {
+    object-fit:cover;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 3px solid #03a9f5;
+}
+
+#bord-az-sm {
+    object-fit:cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #03a9f5;
+}
+
+#bord-verm-sm {
+    object-fit:cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ea1e63;
+}
+
+#darken {
+    display: inline-block;
+    padding: 0;
+}
+
+
+#darken:hover img {
+    opacity: 0.3;      
+}
+
+#darken img {
+    display: block;
+    
+    -webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+}
+
+#titulo-calc {
+    text-align:center;
+    width: 1000px;
+    height: 150px;
+}
+
+#titulo-frutas-cor {
+    font-family: 'Sriracha', cursive;
+}

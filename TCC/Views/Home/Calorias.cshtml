@@ -1,0 +1,60 @@
+﻿@{ 
+    ViewData["Title"] = "Calorias";
+}
+
+<div class="container-fluid mb-5 mt-5">
+    <div class="row mb-5">
+        <div class="col-12 col-sm-12" id="titulo-calc">
+            <img src="~/img/Titulo3.png">
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12 col-sm-12">
+            <div class="yz-widget" data-calculator-type="daily_need" data-language="pt" data-unit-system="metric" data-background-color="#4d4d4d" data-text-color="#ffffff" data-primary-color="#404040" data-alternate-background-color="#404040" data-alternate-text-color="#ffffff" data-secondary-color="#404040"><span class="yz-copyright">Powered by <a href="https://www.yazio.com/pt/calculadora-calorias-diarias">YAZIO</a></span></div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12 col-sm-12" id="titulo-calc">
+            <img src="~/img/info.png">
+        </div>
+    </div>
+
+    <div class="row mb-3" id="calc-texto">
+        <div class="col-6 col-sm-6;">
+            <p>
+                Pessoas ativas e com mais massa muscular<br>
+                gastam mais calorias mesmo quando em repouso<br>
+        </div>
+        <div class="col-6 col-sm-6">
+            <p>
+                O modo ideal para se perder peso é associar<br>
+                o aumento do gasto calórico diário<br>
+                com a restrição da ingestão de calorias
+            </p>
+        </div>
+    </div>
+
+    <div class="row mb-5" id="calc-texto">
+        <div class="col-6 col-sm-6;">
+            <p>
+                É muito mais fácil emagrecer aumentando o seu<br>
+                gasto diário de calorias através de exercícios<br>
+                físicos do que fazer apenas uma dieta.
+            </p>
+        </div>
+        <div class="col-6 col-sm-6">
+            <p>
+                Os cálculos funcionam para uma pessoa<br>
+                saudável, podendo variar se a pessoa tiver<br>
+                alguma doença crônica ou se estiver acamada
+            </p>
+        </div>
+    </div>
+</div>
+
+@section Scripts{ 
+    <script src="https://widget.yazio.com/calculator.js"></script>
+}
